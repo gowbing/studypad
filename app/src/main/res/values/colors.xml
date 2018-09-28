@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="blue">#2c90ff</color>
+    <color name="lightblue">#e3f0ff</color>
+    <color name="red">#e5191c</color>
+    <!--
+        大面积使用，用户标题文字、正文文字
+    -->
+    <color name="grey">#f4f4f4</color>
+    <!--
+        用于底部导航栏背景
+    -->
+    <color name="grey2">#EEEEEE</color>
+    <color name="grey3">#EAEAEA</color>
+    <color name="gray">#8D8D8D</color>
+    <color name="light_gray">#c4c4c4</color>
+    <!--
+        用于非点击icon
+    -->
+    <color name="darkgrey">#9F9F9F</color>
+    <!--
+        用于提示性文字
+    -->
+    <color name="darkgrey2">#BFBFBF</color>
+
+</resources>

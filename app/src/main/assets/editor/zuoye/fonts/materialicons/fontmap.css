@@ -1,0 +1,224 @@
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: /*local('Material Icons'),
+       local('MaterialIcons-Regular'),*/
+       url(./MaterialIcons-Regular.woff2) format('woff2'),
+       url(./MaterialIcons-Regular.woff) format('woff'),
+       url(./MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+  /*transform: translate(0, 0);*/
+  
+  
+  vertical-align: middle;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#icons {
+  padding-bottom: 60px;
+}
+
+#icons li {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+  width: 40px;
+  color: #777;
+  cursor: pointer;
+}
+
+#icons li.active {
+  background-color: #ddd;
+  outline: 10px solid #ddd;
+  color: #222;
+}
+
+#icons li span {
+  display: block;
+  font-size: 0;
+}
+
+body {
+  background: #f2f4f8;
+}
+ul {
+  padding-left: 0;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+@media (min-width: 768px){
+  .navbar-form .form-control {
+      display: inline-block;
+      width: auto;
+      vertical-align: middle;
+  }
+}
+
+
+.navbar-form .btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    
+    display:none;
+}
+
+
+
+
+
+
+.btn .material-icons {
+  position: relative;
+  top: 6px;
+  /*left: -2px;*/
+  line-height: 10px;
+  padding-bottom: 12px;
+}
+.btn-sm .material-icons,
+.btn-xs .material-icons {
+  font-size: 18px;
+  top: 3px;
+  padding-bottom: 8px;
+}
+
+.dropdown-menu .material-icons {
+  position: relative;
+  top: 6px;
+  left: -8px;
+  line-height: inherit;
+  padding-bottom: 12px;
+}
+
+.nav .material-icons {
+  position: relative;
+  top: 6px;
+  left: -2px;
+  line-height: 10px;
+  padding-bottom: 12px;
+}
+
+.breadcrumb .material-icons {
+  position: relative;
+  top: 6px;
+  line-height: 10px;
+  padding-bottom: 12px;
+}
+
+.alert .material-icons {
+  position: relative;
+  top: 6px;
+  line-height: 10px;
+  padding-bottom: 12px;
+  margin-right: 2px;
+}
+
+.input-group-addon .material-icons {
+  position: relative;
+  top: 5px;
+  line-height: 10px;
+  padding-bottom: 10px;
+}
+.list-group-item .material-icons {
+  position: relative;
+  top: 6px;
+  left: -2px;
+  line-height: 7px;
+  padding-bottom: 13px;
+}
+
+#detail {
+  position: fixed;
+  width: 100%;
+  padding: 20px 10px;
+  bottom: 0;
+  background-color: #fff;
+  -webkit-box-shadow: 0 -2px 2px rgba(0,0,0,0.1);
+  box-shadow: 0 -2px 2px rgba(0,0,0,0.1);
+  text-align: center;
+  -webkit-transform: translate(0, 190px);
+  transform: translate(0, 190px);
+}
+#detail div {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+#detail div.hex {
+  font-weight: bold;
+  background-color: #ddd;
+  font-size: 18px;
+}
+
+#detail.active {
+  -webkit-animation: detail_show .3s 1 both;
+  animation: detail_show .3s 1 both;
+}
+@-webkit-keyframes detail_show {
+	0%{ -webkit-transform: translate(0, 190px); opacity:0 }
+  1%{ -webkit-transform: translate(0, 190px); opacity:1 }
+	100%{ -webkit-transform: translate(0, 0); opacity:1 }
+}
+@keyframes detail_show {
+	0%{ transform: translate(0, 190px); opacity:0 }
+  1%{ transform: translate(0, 190px); opacity:1 }
+	100%{ transform: translate(0, 0); opacity:1 }
+}
+
+#version {
+  font-size: 12px;
+  color: #ccc;
+  padding-top: 10px;
+}

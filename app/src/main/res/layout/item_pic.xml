@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/pic_rl"
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/pic_iv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"/>
+        <ImageView
+            android:id="@+id/del_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:src="@drawable/icon_del"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/upload_ll"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:background="@drawable/bg_frame_blue">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:src="@drawable/icon_upload"/>
+    </LinearLayout>
+</LinearLayout>

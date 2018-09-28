@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/url_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_frame_darkgrey"
+                    android:paddingLeft="10dp"
+                    android:hint="请输入网页地址"
+                    android:textColorHint="@color/darkgrey2"/>
+                <Button
+                    android:id="@+id/submit_bt"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/round20dp_blue"
+                    android:layout_marginRight="10dp"
+                    android:text="显示"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"/>
+                <Button
+                    android:id="@+id/toweb_bt"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/round20dp_blue"
+                    android:layout_marginRight="10dp"
+                    android:text="导入到网页"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"/>
+                <Button
+                    android:id="@+id/toapp_bt"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/round20dp_blue"
+                    android:layout_marginRight="10dp"
+                    android:text="从网页导出"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+            </WebView>
+
+            <EditText
+                android:id="@+id/tohtml_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey"
+                android:hint="html代码"
+                android:textColorHint="@color/darkgrey2"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

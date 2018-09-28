@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/pic_iv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:scaleType="fitXY"
+            android:padding="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="真实的海燕在搏击海浪"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:lines="1"
+                android:ellipsize="end"
+                />
+            <TextView
+                android:id="@+id/type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=".jpg图片文件"
+                android:layout_marginLeft="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/darkgrey"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/download_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            android:padding="10dp"
+            android:src="@drawable/icon_download"/>
+    </LinearLayout>
+</LinearLayout>

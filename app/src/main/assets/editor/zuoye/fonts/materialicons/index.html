@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Material design icons 图表</title>
+
+<!--<base href="/" />-->
+
+<!--<link href="../../css/bootstrap/3.3.5/bootstrap.min.css" rel="stylesheet">
+<link href="../../css/material-icons.css" rel="stylesheet">
+<link href="../../css/base.css" rel="stylesheet">-->
+<!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+<link href="./fontmap.css" rel="stylesheet">
+
+<script src="http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.min.js"></script>
+<!--<script src="../../js/bootstrap/3.3.5/bootstrap.min.js"></script>-->
+</head>
+<body>
+
+
+
+<h2></h2>
+
+<div class="navbar-form form-group">
+  <input id="tag" type="text" name="s" class="form-control" placeholder="搜索">
+  <button id="tag_submit" type="button" class="btn"><i class="material-icons"></i></button>
+</div>
+<div id="version">基于 Material design icons 2.2，比上一版增加41个新图标。</div>
+<ul id="icons">
+
+</ul>
+
+
+<div id="detail">
+
+</div>
+
+
+
+
+
+<script type="text/javascript">
+console.log("感谢 %cG%co%co%cg%cl%ce%c ！孙老四（Lao.si）仅作整理及注释。", "color:blue","color:red","color:orange","color:blue","color:green","color:red","");
+
+
+$.get("./MaterialIcons-Regular.ijmap.translation.json", function(data,status){
+
+  var translation = ( ( typeof(data) == "string" )?JSON.parse(data):data );
+
+  $.get("./MaterialIcons-Regular.ijmap.json?v=2.2", function(data,status){
+
+    var iconshtml = "";
+
+    if( typeof(data) == "string" ) {
+      data = JSON.parse(data);
+    }
+
+    for(var i in data.icons){
+     //console.log( i );
+     t = "<li title=\"" + data.icons[i].name + " " + 
+         (( translation.en2zh[ data.icons[i].name ] )?translation.en2zh[ data.icons[i].name ]:"") + 
+         "\" data-hex=\"" + i + 
+         "\" data-en=\"" + data.icons[i].name + 
+         "\" data-en2zh=\"" + (( translation.en2zh[ data.icons[i].name ] )?translation.en2zh[ data.icons[i].name ]:"") + 
+         "\" ><i class=\"material-icons\">&#x" + i + 
+         "</i><span>" + data.icons[i].name + " " + 
+         (( translation.en2zh[ data.icons[i].name ] )?translation.en2zh[ data.icons[i].name ]:"") + 
+         "</span></li>";
+     iconshtml += t;
+     
+    }
+
+    document.getElementById("icons").innerHTML = iconshtml;
+
+  });
+
+});
+
+jQuery.expr[':'].contains = function(a, i, m) {  
+  return jQuery(a).text().toUpperCase()
+      .indexOf(m[3].toUpperCase()) >= 0;    
+};
+
+$("#tag").change(function(){
+var tag = $(this).val();
+  $("#icons li").hide().children("span").filter(":contains('" + tag + "')").parent("li").show(); 
+});
+$("#tag").keyup(function(){
+  var tag = $(this).val();
+  $("#icons li").hide().children("span").filter(":contains('" + tag + "')").parent("li").show();
+});
+
+$("#tag_submit").on("click", function(client) {
+  var tag = $("#tag").val();
+  $("#icons li").hide().children("span").filter(":contains('" + tag + "')").parent("li").show(); 
+});
+
+$("#icons").on("click", "li", function(client) {
+  $("#icons li").removeClass("active");
+  $("#detail").html( "<div><i class=\"material-icons\">" + $(this).find(".material-icons").text() + 
+  "</i></div><div class=\"hex\"><span></span>&amp;#x" + $(this).attr("data-hex") + 
+  "</div><div><span></span>" + $(this).attr("data-en") + 
+  "</div>" ).addClass("active");
+  if( $(this).attr("data-en2zh") != "undefined" ) {
+    $("#detail").append( "<div><span></span>" + $(this).attr("data-en2zh") + "</div>" );
+  }
+  
+  $(this).addClass("active");
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.cjj.MaterialRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:isLoadMore="true"
+        app:overlay="true"
+        app:progress_colors="@array/material_colors"
+        app:progress_size_type="normal"
+        app:wave_color="#00ffffff"
+        app:wave_height_type="normal"
+        app:wave_show="true">
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/round10dp_white"
+        android:elevation="5dip"
+        android:scrollbars="none"
+        android:dividerHeight="0sp"
+        android:paddingBottom="20dp"
+        android:divider="#00000000"></ListView>
+    </com.cjj.MaterialRefreshLayout>
+</LinearLayout>
